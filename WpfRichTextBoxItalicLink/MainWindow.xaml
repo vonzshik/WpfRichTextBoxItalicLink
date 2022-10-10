@@ -1,0 +1,22 @@
+﻿<Window x:Class="WpfRichTextBoxItalicLink.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfRichTextBoxItalicLink"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <RichTextBox Margin="0,74,0,0" Name="RTB" SelectionChanged="RTB_SelectionChanged">
+            <FlowDocument>
+                <Paragraph>
+                    <Hyperlink x:Name="HL">
+                        <Run Text="https://google.com"/>
+                    </Hyperlink>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <Button Content="Italic" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Click="Button_Click" Name="ItalicButton"
+                Background="{Binding ItalicButtonColor, Mode=OneWay}"/>
+    </Grid>
+</Window>
